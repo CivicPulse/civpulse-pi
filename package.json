@@ -1,0 +1,56 @@
+{
+  "name": "civpulse-pi",
+  "version": "0.1.0",
+  "description": "Pi package that adds the authenticated Civic Pulse MCP server, civic skills, a write-confirmation guard, and research/editing/mapping/account workflows.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Kerry Hatcher"
+  },
+  "homepage": "https://github.com/CivicPulse/civpulse-pi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CivicPulse/civpulse-pi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CivicPulse/civpulse-pi/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "civicpulse",
+    "civic",
+    "civic-data",
+    "elections",
+    "mcp",
+    "skills"
+  ],
+  "files": [
+    "extensions/",
+    "prompts/",
+    "references/",
+    "scripts/",
+    "skills/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "check": "bun run scripts/check-setup.ts"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/civpulse.ts"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts/*.md"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
